@@ -12,6 +12,11 @@ class PersonSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        DB::table('users')->insert([
+            'name' => Str::random(10),
+            'email' => Str::random(10).'@gmail.com',
+            'cellphone' => Str::random(10),
+            'sex' => Str::random(10),
+        ]);
     }
 }
